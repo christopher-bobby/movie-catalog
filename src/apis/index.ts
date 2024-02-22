@@ -3,3 +3,10 @@ export const listOfFilms = async () => {
   const data = await result.json();
   return data?.results || [];
 };
+
+export const filmDetail = async(id: string) => {
+  let result = await fetch(`https://swapi.dev/api/films/${id}`);
+  const data = await result.json();
+  console.log("data", data)
+  return data || {}
+}

@@ -1,7 +1,6 @@
 
-import React, { useEffect, useState } from 'react';
-import './App.css';
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 import Cart from './pages/Cart';
@@ -11,10 +10,11 @@ export const CartContext = React.createContext({});
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [totalPrice, setTotalPrice] = useState<number>(0);
 
   return (
     <BrowserRouter>
-      <CartContext.Provider value={{ cart: cart, setCart: setCart }}>
+      <CartContext.Provider value={{ cart, setCart, totalPrice, setTotalPrice }}>
         <Header />
         <Routes>
           <Route

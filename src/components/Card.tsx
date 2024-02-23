@@ -6,14 +6,13 @@ interface StarWarsProduct {
     title: string;
     episodeId: string;
     releaseDate: string;
-    url: string;
     openingCrawl: string;
     price: string;
     redirect: MouseEventHandler<HTMLDivElement>;
 }
 
 const Card = (props: StarWarsProduct) => {
-    const {  title, episodeId, releaseDate, url, openingCrawl, price, redirect } = props
+    const {  title, episodeId, releaseDate, openingCrawl, price, redirect } = props
     return (
         <div className="group flex flex-col items-center w-full cursor-pointer flex-shrink-0" onClick={redirect}>
             <div className="w-full relative">

@@ -7,7 +7,7 @@ import { listOfFilms } from '../apis';
 
 
 function Home() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [isLoadingFetching, setIsLoadingFetching] = useState<boolean>(true);
   const [filmList, setFilmList] = useState([])
 
@@ -27,15 +27,14 @@ function Home() {
       {isLoadingFetching && (<Loading />)}
       <div className="px-[24px] flex md:flex-row flex-col md:flex-wrap">
         {filmList.map((film: any, index) => {
-            let strIndex = film.url.lastIndexOf('/films/');
-            let detailId = film.url.slice(strIndex + 7, film.url.length - 1);
+          let strIndex = film.url.lastIndexOf('/films/');
+          let detailId = film.url.slice(strIndex + 7, film.url.length - 1);
           return (
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4 mb-4" key={film?.episode_id}>
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4 mb-16" key={film?.episode_id}>
               <Card 
                 title={film?.title}
                 episodeId={film?.episode_id}
                 releaseDate={film?.release_date}
-                url={film?.url}
                 openingCrawl={film?.opening_crawl}
                 price={"50.000"}
                 redirect={()=>navigate(`/detail/${detailId}`)}

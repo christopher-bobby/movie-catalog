@@ -15,3 +15,8 @@
 
 # How to Test:
 - type `npm run test` in your terminal / command prompt
+
+
+# Future improvement:
+- Integrate cart with API
+- Implement caching strategy

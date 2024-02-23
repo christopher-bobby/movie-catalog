@@ -26,8 +26,8 @@ const Cart = () => {
         newCart.splice(index, 1);
         setFinalCart(newCart);
         setCart(newCart);
-        let totalRemovedPrice = count * 50000;
-        setTotalPrice(()=> totalPrice - totalRemovedPrice)
+        let totalFinalPrice = totalPrice - count * 50000;
+        setTotalPrice(totalFinalPrice)
     }
 
     const removeAllItems = () => {

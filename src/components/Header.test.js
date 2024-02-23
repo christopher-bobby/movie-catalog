@@ -7,6 +7,7 @@ describe('Header', () => {
 
     const renderWithRouter = (children) =>
     render(<MemoryRouter initialEntries={['/']}>{children}</MemoryRouter>);
+    
     jest.mock("react-router-dom", () => ({
         ...jest.requireActual("react-router-dom"), // Use actual implementations for other exports
         useNavigate: () => jest.fn() // Mock useNavigate hook

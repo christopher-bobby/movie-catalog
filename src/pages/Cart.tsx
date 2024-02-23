@@ -68,7 +68,7 @@ const Cart = () => {
                         </div>
                     )
                 })}
-                <div className="text-lg mt-6 pl-4">Total: <span className="text-2xl font-bold pl-4">{totalPrice}</span></div>
+                <div className="text-lg mt-6 pl-4">Total: <span className="text-2xl font-bold pl-4">IDR {totalPrice}</span></div>
                 <div onClick={removeAllItems} className="text-lg mt-4 cursor-pointer pl-4">Delete All</div>
             </div>
         </div>

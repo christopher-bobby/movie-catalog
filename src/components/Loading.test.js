@@ -5,6 +5,5 @@ import Loading from "./Loading";
 test("Loading component renders correctly", () => {
   const { getByText } = render(<Loading />);
   const loadingText = getByText("Loading...");
-  expect(loadingText).toBeInTheDocument();
-  
+  expect(loadingText).toBeInTheDocument()
 });

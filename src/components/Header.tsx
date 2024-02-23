@@ -15,8 +15,8 @@ const Header = () => {
           alt="Star Wars Logo"
         />
         <div className="flex lg:w-[300px]  w-[150px] justify-between">
-          <p className="text-white cursor-pointer" onClick={() => navigate("/")}>Movies</p>
-          <p className="text-white cursor-pointer" onClick={() => navigate("/")}>Top IMDB</p>
+          <a className="cursor-pointer transform hover:underline hover:text-customYellow transition duration-500 ease-in-out " onClick={() => navigate("/")}>Movies</a>
+          <a className="cursor-pointer transform hover:underline hover:text-customYellow transition duration-500 ease-in-out" onClick={() => navigate("/")}>Top IMDB</a>
         </div>
         <div className="flex gap-4 items-center">
           <div className="flex items-center cursor-pointer">

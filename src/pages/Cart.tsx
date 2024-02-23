@@ -52,7 +52,7 @@ const Cart = () => {
                 </div>
                 {finalCart.map((item: any, index: number) => {
                     return (
-                        <div key={item.id} className="border border-white rounded-md mb-8">
+                        <div key={item.id} className="border border-customYellow rounded-md mb-8">
                             <div className="flex justify-between">
                                 <div className="w-1/3 p-4">
                                     <span>{item.title}</span>

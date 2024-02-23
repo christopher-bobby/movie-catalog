@@ -16,9 +16,7 @@ function Home() {
       let res = await listOfFilms();
       setIsLoadingFetching(false)
       setFilmList(res);
-      console.log("res", res)
     }
-
 
     fetchFilms();
  

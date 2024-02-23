@@ -25,10 +25,6 @@ const Detail = () => {
     }, [])
 
     const addToCart = () => {
-        // let addedCart = [...cart, {id: productId, title: productDetails.title, price: 50000}]
-        // let newCart = mergeObjectsWithCount(addedCart)
-        // console.log("addedCart", newCart)
-
         setCart([...cart, {id: productId, title: productDetails.title, price: 50000}])
     }
 

@@ -11,7 +11,6 @@ export const CartContext = React.createContext({});
 
 function App() {
   const [cart, setCart] = useState([]);
-  console.log("Cart", cart)
 
   return (
     <BrowserRouter>

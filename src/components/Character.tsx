@@ -5,12 +5,14 @@ const Character = ({ characterUrl }: { characterUrl: string }) => {
   const fetchDetailCharacter = async () => {
     let results = await fetch(characterUrl);
     const data = await results.json();
+    console.log("data", data, results)
     setCharacter(data);
   };
 
   useEffect(() => {
     fetchDetailCharacter();
   }, []);
+
   return (
     <div className="character-card flex items-center">
       <img

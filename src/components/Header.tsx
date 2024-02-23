@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import * as Icons from "heroicons-react";
-import { createSearchParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [search, setSearch] = useState("");
 
   return (
     <>
@@ -13,12 +12,11 @@ const Header = () => {
           onClick={() => navigate("/")}
           src="https://www.freepnglogos.com/uploads/star-wars-logo-0.png"
           className="w-[7%] cursor-pointer"
+          alt="Star Wars Logo"
         />
         <div className="grid grid-cols-4 gap-20">
-          <p className="text-white">Title</p>
-          <p className="text-white">Movies</p>
-          <p className="text-white">Top IMDB</p>
-          <p className="text-white">Other</p>
+          <p className="text-white cursor-pointer" onClick={() => navigate("/")}>Movies</p>
+          <p className="text-white cursor-pointer" onClick={() => navigate("/")}>Top IMDB</p>
         </div>
         <div className="flex gap-4 items-center">
           

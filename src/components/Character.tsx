@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { CharacterTypes } from "../interfaces/types";
+
 
 const Character = ({ characterUrl }: { characterUrl: string }) => {
-  const [character, setCharacter] = useState<any>({});
+  const [character, setCharacter] = useState<CharacterTypes>({});
   const fetchDetailCharacter = async () => {
     let results = await fetch(characterUrl);
     const data = await results.json();

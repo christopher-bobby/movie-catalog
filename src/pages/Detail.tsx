@@ -4,12 +4,12 @@ import { CartContext } from "../App";
 import { filmDetail } from '../apis';
 import Character from '../components/Character';
 import Loading from "../components/Loading";
-
+import { ProductDetails } from "../interfaces/types";
 
 const Detail = () => {
     const { productId } = useParams();
     const { cart, setCart, setTotalPrice } = useContext<any>(CartContext);
-    const [productDetails, setProductDetails] = useState<any>({})
+    const [productDetails, setProductDetails] = useState<ProductDetails>({})
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [showAddedMessage, setShowAddedMessage] = useState<boolean>(false);
 
@@ -77,8 +77,8 @@ const Detail = () => {
                     <div className="lg:w-1/3 p-6">
                         <p className="text-xl font-bold mb-4">Characters</p>
                         <div className="">
-                            {productDetails?.characters?.map((data: any, index: any) => {
-                                return <Character key={index} characterUrl={data} />;
+                            {productDetails?.characters?.map((data: string, index: number) => {
+                                return <Character key={`${data}_${index}`} characterUrl={data} />;
                             })}
                         </div>
                     </div>

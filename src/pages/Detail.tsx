@@ -4,7 +4,7 @@ import { CartContext } from "../App";
 import { filmDetail } from '../apis';
 import Character from '../components/Character';
 import Loading from "../components/Loading";
-import { ProductDetails } from "../interfaces/types";
+import { ProductDetails } from "../types/interfaces";
 
 const Detail = () => {
     const { productId } = useParams();

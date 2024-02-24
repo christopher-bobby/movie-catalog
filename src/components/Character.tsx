@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { CharacterTypes } from "../interfaces/types";
+import { CharacterTypes } from "../types/interfaces";
 
 
 const Character = ({ characterUrl }: { characterUrl: string }) => {

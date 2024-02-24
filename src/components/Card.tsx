@@ -1,6 +1,6 @@
-import React, { MouseEventHandler } from "react";
+import React from "react";
 import * as Icons from "heroicons-react";
-import { StarWarsProduct } from "../interfaces/types";
+import { StarWarsProduct } from "../types/interfaces";
 
 
 const Card = (props: StarWarsProduct) => {

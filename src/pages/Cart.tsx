@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { CartContext } from "../App";
-import { CartItem } from "../interfaces/types";
+import { CartItem } from "../types/interfaces";
 
 
 const Cart = () => {

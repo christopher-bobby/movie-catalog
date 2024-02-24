@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Loading from '../components/Loading';
 import Card from '../components/Card';
 import { listOfFilms } from '../apis';
-import { Film } from '../interfaces/types';
+import { Film } from '../types/interfaces';
 
 
 function Home() {

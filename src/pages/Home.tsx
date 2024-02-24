@@ -7,8 +7,6 @@ import { listOfFilms } from '../apis';
 import { Film } from '../interfaces/types';
 
 
-
-
 function Home() {
   const navigate = useNavigate();
   const [isLoadingFetching, setIsLoadingFetching] = useState<boolean>(true);

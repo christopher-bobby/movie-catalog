@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import Loading from '../components/Loading';
 import Card from '../components/Card';
 import { listOfFilms } from '../apis';
+import { Film } from '../interfaces/types';
+
+
 
 
 function Home() {
@@ -26,9 +29,9 @@ function Home() {
     <div className="App">
       {isLoadingFetching && (<Loading />)}
       <div className="px-[24px] flex md:flex-row flex-col md:flex-wrap">
-        {filmList.map((film: any, index) => {
-          let strIndex = film.url.lastIndexOf('/films/');
-          let detailId = film.url.slice(strIndex + 7, film.url.length - 1);
+        {filmList.map((film: Film) => {
+          let strIndex = film?.url?.lastIndexOf('/films/') || -1;
+          let detailId = film?.url?.slice(strIndex + 7, film.url.length - 1);
           return (
             <div className="lg:w-1/4 md:w-1/2 w-full px-4 mb-16" key={film?.episode_id}>
               <Card 

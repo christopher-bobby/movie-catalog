@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { CartContext } from "../App";
+import { CartItem } from "../interfaces/types";
 
 
 const Cart = () => {
@@ -7,7 +8,7 @@ const Cart = () => {
     const { cart, setCart, totalPrice, setTotalPrice } = useContext<any>(CartContext);
 
     const merged = cart.reduce((acc: any, obj: any) => {
-        const found = acc.find((item:any) => item.id === obj.id);
+        const found = acc.find((item: CartItem) => item.id === obj.id);
         if (found) {
             found.count++;
         } else {
@@ -50,7 +51,7 @@ const Cart = () => {
                         <span className="font-bold">Total Item</span>
                     </div>
                 </div>
-                {finalCart.map((item: any, index: number) => {
+                {finalCart.map((item: CartItem, index: number) => {
                     return (
                         <div key={item.id} className="border border-customYellow rounded-md mb-8">
                             <div className="flex justify-between">

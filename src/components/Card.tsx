@@ -1,15 +1,7 @@
 import React, { MouseEventHandler } from "react";
 import * as Icons from "heroicons-react";
+import { StarWarsProduct } from "../interfaces/types";
 
-
-interface StarWarsProduct {
-    title: string;
-    episodeId: string;
-    releaseDate: string;
-    openingCrawl: string;
-    price: string;
-    redirect: MouseEventHandler<HTMLDivElement>;
-}
 
 const Card = (props: StarWarsProduct) => {
     const {  title, episodeId, releaseDate, openingCrawl, price, redirect } = props
@@ -37,7 +29,7 @@ const Card = (props: StarWarsProduct) => {
             </p>
             <div className="flex justify-between w-full items-center">
             <p className="p-1 text-md">
-               Released: {releaseDate.substring(0, 4)}
+               Released: {releaseDate?.substring(0, 4)}
             </p>
             <span className="p-1 text-center text-sm font-bold">
                 Price: IDR {price}
